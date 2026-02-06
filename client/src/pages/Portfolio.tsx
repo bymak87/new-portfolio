@@ -8,7 +8,7 @@ import { ExternalLink } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 import type { Project } from "@shared/schema";
 
-const categories = ["All", "Web Design", "Mobile App Design", "Brand Identity", "UI/UX Design"];
+const categories = ["All", "Web Development", "Web Application"];
 
 export default function Portfolio() {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -31,8 +31,8 @@ export default function Portfolio() {
               My Creative Works
             </h1>
             <p className="text-muted-foreground text-lg" data-testid="text-portfolio-description">
-              Explore my collection of projects spanning web design, mobile apps, 
-              brand identity, and UI/UX design.
+              Explore my collection of web development projects, applications, 
+              and digital experiences.
             </p>
           </div>
 

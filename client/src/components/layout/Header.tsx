@@ -24,7 +24,7 @@ export function Header() {
               className="font-serif text-2xl md:text-3xl font-bold text-primary cursor-pointer"
               data-testid="link-logo"
             >
-              Portfolio
+              BYMA
             </span>
           </Link>
 

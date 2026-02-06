@@ -1,40 +1,36 @@
-import { Monitor, Smartphone, Palette, Layout } from "lucide-react";
+import { Monitor, Code, Palette, Layout } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 const services = [
   {
     id: "1",
-    title: "Website Design",
-    description: "Creating beautiful, functional websites that engage users and drive results.",
-    projectCount: 76,
-    icon: "monitor",
+    title: "Web Development",
+    description: "Building responsive, performant websites with modern technologies.",
+    icon: "code",
   },
   {
     id: "2",
-    title: "Mobile App Design",
-    description: "Crafting intuitive mobile experiences that users love to interact with.",
-    projectCount: 63,
-    icon: "smartphone",
+    title: "Web Design",
+    description: "Creating beautiful, user-focused designs that drive engagement.",
+    icon: "monitor",
   },
   {
     id: "3",
-    title: "Brand Identity",
-    description: "Building memorable brand identities that tell your unique story.",
-    projectCount: 47,
-    icon: "palette",
+    title: "UI/UX Design",
+    description: "Designing intuitive interfaces with a focus on user experience.",
+    icon: "layout",
   },
   {
     id: "4",
-    title: "UI/UX Design",
-    description: "Designing interfaces that are both beautiful and easy to use.",
-    projectCount: 89,
-    icon: "layout",
+    title: "Digital Strategy",
+    description: "Optimizing web presence through SEO, analytics, and content strategy.",
+    icon: "palette",
   },
 ];
 
 const iconMap = {
+  code: Code,
   monitor: Monitor,
-  smartphone: Smartphone,
   palette: Palette,
   layout: Layout,
 };
@@ -58,7 +54,7 @@ export function ServicesSection() {
                   </div>
                   <div className="space-y-1">
                     <h3 className="font-semibold text-foreground" data-testid={`text-service-title-${service.id}`}>{service.title}</h3>
-                    <p className="text-sm text-muted-foreground" data-testid={`text-service-count-${service.id}`}>{service.projectCount} Projects</p>
+                    <p className="text-sm text-muted-foreground" data-testid={`text-service-description-${service.id}`}>{service.description}</p>
                   </div>
                 </Card>
               );
@@ -68,26 +64,27 @@ export function ServicesSection() {
           <div className="space-y-8 lg:sticky lg:top-32">
             <div className="space-y-4">
               <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground" data-testid="text-services-title">
-                What do I help?
+                How can I help?
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed" data-testid="text-services-description-1">
-                I will help you with finding a solution and solving your problems. 
-                I use process design to create digital products that also help their business.
+                I use process design to create digital products that help businesses grow. 
+                From building websites and web apps to optimizing user experiences, I find 
+                solutions and solve problems.
               </p>
               <p className="text-muted-foreground leading-relaxed" data-testid="text-services-description-2">
-                Besides that, I also help their business grow by creating effective digital strategies 
-                that align with their goals and target audience.
+                I'm passionate about learning and keeping up with design trends, 
+                bringing the latest best practices to every project I work on.
               </p>
             </div>
 
             <div className="flex flex-wrap items-center gap-8">
               <div className="text-center">
-                <p className="font-serif text-4xl sm:text-5xl font-bold text-accent" data-testid="stat-projects-completed">285+</p>
-                <p className="text-sm text-muted-foreground mt-1">Projects Completed</p>
+                <p className="font-serif text-4xl sm:text-5xl font-bold text-accent" data-testid="stat-projects-completed">10+</p>
+                <p className="text-sm text-muted-foreground mt-1">Years Experience</p>
               </div>
               <div className="text-center">
-                <p className="font-serif text-4xl sm:text-5xl font-bold text-accent" data-testid="stat-happy-clients">190+</p>
-                <p className="text-sm text-muted-foreground mt-1">Happy Clients</p>
+                <p className="font-serif text-4xl sm:text-5xl font-bold text-accent" data-testid="stat-happy-clients">UW</p>
+                <p className="text-sm text-muted-foreground mt-1">Class of 2009</p>
               </div>
             </div>
           </div>

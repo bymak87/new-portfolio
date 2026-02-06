@@ -10,33 +10,27 @@ import { insertContactSchema, type InsertContact } from "@shared/schema";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Phone, MapPin, Clock, Send, Loader2 } from "lucide-react";
+import { Mail, MapPin, Clock, Send, Loader2 } from "lucide-react";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 
 const contactInfo = [
   {
     icon: Mail,
-    title: "Email",
-    value: "hello@portfolio.com",
-    description: "Drop me an email anytime",
-  },
-  {
-    icon: Phone,
-    title: "Phone",
-    value: "+1 (555) 123-4567",
-    description: "Mon-Fri from 9am to 6pm",
+    title: "Website",
+    value: "bymadesigns.com",
+    description: "Visit my website",
   },
   {
     icon: MapPin,
     title: "Location",
-    value: "San Francisco, CA",
+    value: "Austin, TX",
     description: "United States",
   },
   {
     icon: Clock,
     title: "Working Hours",
     value: "9:00 AM - 6:00 PM",
-    description: "Pacific Time (PT)",
+    description: "Central Time (CT)",
   },
 ];
 

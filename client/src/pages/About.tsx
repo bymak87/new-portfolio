@@ -2,34 +2,34 @@ import { Layout } from "@/components/layout/Layout";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import { ArrowRight, Download, Award, Heart, Lightbulb, Users } from "lucide-react";
+import { ArrowRight, Download, Heart, Globe, Users } from "lucide-react";
 
 const values = [
+  {
+    id: "curiosity",
+    icon: Globe,
+    title: "Curiosity",
+    description: "An insatiable curiosity for new places, cultures, and ideas that nourishes the soul and fuels creativity.",
+  },
+  {
+    id: "community",
+    icon: Users,
+    title: "Community",
+    description: "Giving back is important to me. I make it a point to volunteer at least once a quarter.",
+  },
   {
     id: "passion",
     icon: Heart,
     title: "Passion",
-    description: "I love what I do and it shows in every project I deliver.",
-  },
-  {
-    id: "innovation",
-    icon: Lightbulb,
-    title: "Innovation",
-    description: "Always exploring new ideas and pushing creative boundaries.",
-  },
-  {
-    id: "collaboration",
-    icon: Users,
-    title: "Collaboration",
-    description: "Working closely with clients to bring their vision to life.",
+    description: "I'm passionate about learning and keeping up with design trends, always growing in my craft.",
   },
 ];
 
 const stats = [
-  { id: "years", value: "10+", label: "Years Experience" },
-  { id: "projects", value: "285+", label: "Projects Completed" },
-  { id: "clients", value: "190+", label: "Happy Clients" },
-  { id: "awards", value: "15+", label: "Awards Won" },
+  { id: "years", value: "10+", label: "Years in Tech" },
+  { id: "uw", value: "UW", label: "Class of 2009" },
+  { id: "marathon", value: "1", label: "Marathon Finished" },
+  { id: "halfmarathons", value: "2", label: "Half-Marathons" },
 ];
 
 export default function About() {
@@ -43,14 +43,10 @@ export default function About() {
               <div className="relative aspect-square max-w-md mx-auto rounded-3xl bg-gradient-to-br from-primary/10 via-accent/5 to-primary/5 border border-border/50 flex items-center justify-center" data-testid="img-about-photo">
                 <div className="text-center p-8">
                   <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-primary/20 flex items-center justify-center">
-                    <span className="font-serif text-5xl font-bold text-primary">JD</span>
+                    <span className="font-serif text-5xl font-bold text-primary">AS</span>
                   </div>
-                  <p className="text-muted-foreground">Your Photo Here</p>
+                  <p className="text-muted-foreground">Amelia Smith</p>
                 </div>
-              </div>
-
-              <div className="absolute -top-6 -right-6 bg-accent/20 rounded-2xl p-4 hidden lg:block" data-testid="badge-certified">
-                <Award className="w-8 h-8 text-accent" />
               </div>
             </div>
 
@@ -58,25 +54,29 @@ export default function About() {
               <div className="space-y-2">
                 <p className="text-primary font-medium" data-testid="text-about-subtitle">About Me</p>
                 <h1 className="font-serif text-4xl sm:text-5xl font-bold text-foreground" data-testid="text-about-title">
-                  Hello, I'm a Creative Designer
+                  Digital Problem Solver
                 </h1>
               </div>
 
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p data-testid="text-about-paragraph-1">
-                  I'm a passionate designer and developer with over 10 years of experience 
-                  creating beautiful digital experiences. My journey started with a simple 
-                  curiosity about how things look and work on the web, which has evolved into 
-                  a full-fledged career dedicated to crafting meaningful user experiences.
+                  I graduated from the University of Washington in 2009 and, fueled by a curiosity 
+                  for new cultures, moved to Korea to teach English. I spent nearly four years there, 
+                  immersing myself in the culture and learning valuable life lessons.
                 </p>
                 <p data-testid="text-about-paragraph-2">
-                  I specialize in web design, mobile app design, and brand identity. My approach 
-                  combines aesthetic sensibility with strategic thinking to create solutions that 
-                  not only look great but also drive real business results.
+                  In 2014, I decided to dive into the world of programming and moved to Austin, 
+                  where I began my journey at MakerSquare. It was a decision that has shaped my 
+                  career and continues to bring me fulfillment. I'm passionate about learning 
+                  and keeping up with design trends.
                 </p>
                 <p data-testid="text-about-paragraph-3">
-                  When I'm not designing, you can find me exploring new design trends, 
-                  contributing to open-source projects, or mentoring aspiring designers.
+                  When it comes to unwinding, I'm a fan of workplace comedies - The Office, Parks and 
+                  Recreation, and Abbott Elementary are a few of my all-time favorites. I discovered 
+                  running during the COVID lockdown, and it's become a lasting passion. I've completed 
+                  one marathon and two half-marathons. I also have an insatiable curiosity for new 
+                  places, and I truly believe that traveling and experiencing different cultures 
+                  nourishes the soul.
                 </p>
               </div>
 
@@ -87,10 +87,12 @@ export default function About() {
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
-                <Button variant="outline" size="lg" data-testid="button-about-download-cv">
-                  <Download className="mr-2 h-4 w-4" />
-                  Download CV
-                </Button>
+                <a href="https://www.bymadesigns.com/AmeliaSmith2025.pdf" target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline" size="lg" data-testid="button-about-download-cv">
+                    <Download className="mr-2 h-4 w-4" />
+                    View Resume
+                  </Button>
+                </a>
               </div>
             </div>
           </div>

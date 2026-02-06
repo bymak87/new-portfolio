@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Download, Award } from "lucide-react";
+import { ArrowRight, Download, Code } from "lucide-react";
 
 export function HeroSection() {
   return (
@@ -18,7 +18,7 @@ export function HeroSection() {
               <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-tight" data-testid="text-hero-title">
                 I'm a{" "}
                 <span className="text-primary relative">
-                  Creative
+                  Digital
                   <svg
                     className="absolute -bottom-2 left-0 w-full h-3 text-primary/30"
                     viewBox="0 0 200 12"
@@ -34,10 +34,10 @@ export function HeroSection() {
                     />
                   </svg>
                 </span>{" "}
-                Designer
+                Problem Solver
               </h1>
               <p className="text-muted-foreground text-lg md:text-xl max-w-lg leading-relaxed" data-testid="text-hero-description">
-                I design beautifully simple things, and I love what I do. Bringing ideas to life through thoughtful design and development.
+                I build and design websites, web apps, and digital experiences that help businesses grow. From front-end development to UX design, I bring ideas to life.
               </p>
             </div>
 
@@ -48,17 +48,19 @@ export function HeroSection() {
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
-              <Button variant="outline" size="lg" data-testid="button-download-cv">
-                <Download className="mr-2 h-4 w-4" />
-                Download CV
-              </Button>
+              <a href="https://www.bymadesigns.com/AmeliaSmith2025.pdf" target="_blank" rel="noopener noreferrer">
+                <Button variant="outline" size="lg" data-testid="button-download-cv">
+                  <Download className="mr-2 h-4 w-4" />
+                  View Resume
+                </Button>
+              </a>
             </div>
 
             <div className="flex flex-wrap items-center gap-8 pt-4">
               <div className="flex items-center gap-3" data-testid="stat-experience">
                 <div className="relative">
                   <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center">
-                    <span className="font-serif text-2xl font-bold text-accent">10</span>
+                    <span className="font-serif text-2xl font-bold text-accent">10+</span>
                   </div>
                 </div>
                 <div>
@@ -69,13 +71,13 @@ export function HeroSection() {
 
               <div className="hidden sm:block w-px h-12 bg-border" />
 
-              <div className="flex items-center gap-3" data-testid="badge-certified">
+              <div className="flex items-center gap-3" data-testid="badge-developer">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Award className="w-5 h-5 text-primary" />
+                  <Code className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <p className="font-semibold text-foreground">Certified</p>
-                  <p className="text-xs text-muted-foreground">UI/UX Designer</p>
+                  <p className="font-semibold text-foreground">Full Stack</p>
+                  <p className="text-xs text-muted-foreground">Web Developer</p>
                 </div>
               </div>
             </div>
@@ -101,17 +103,17 @@ export function HeroSection() {
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center p-8">
                     <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-primary/20 flex items-center justify-center">
-                      <span className="font-serif text-5xl font-bold text-primary">JD</span>
+                      <span className="font-serif text-5xl font-bold text-primary">AS</span>
                     </div>
-                    <p className="text-lg font-medium text-foreground">Your Photo Here</p>
-                    <p className="text-sm text-muted-foreground mt-2">Professional headshot</p>
+                    <p className="text-lg font-medium text-foreground">Amelia Smith</p>
+                    <p className="text-sm text-muted-foreground mt-2">Digital Problem Solver</p>
                   </div>
                 </div>
               </div>
 
               <div className="absolute -bottom-4 -left-4 bg-card rounded-2xl p-4 shadow-lg border border-border" data-testid="card-email-cta">
-                <p className="text-sm text-muted-foreground">Email me at</p>
-                <p className="font-medium text-primary">hello@portfolio.com</p>
+                <p className="text-sm text-muted-foreground">Get in touch</p>
+                <p className="font-medium text-primary">bymadesigns.com</p>
               </div>
             </div>
           </div>

@@ -1,68 +1,71 @@
 import { Layout } from "@/components/layout/Layout";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Download, Briefcase, GraduationCap, Award } from "lucide-react";
+import { Download, Briefcase, GraduationCap } from "lucide-react";
 
 const experiences = [
   {
     id: "1",
-    company: "TechCorp Design Studio",
-    role: "Senior UI/UX Designer",
-    period: "2021 - Present",
-    description: "Leading design initiatives for enterprise clients, mentoring junior designers, and establishing design system standards.",
-    location: "San Francisco, CA",
+    company: "Tanium",
+    role: "Web Developer",
+    period: "2020 - Present",
+    description: "Manage website as a product with external consultants. Oversee production requests, develop new features, optimize pages to increase traffic and conversions. Collaborate on content strategy for SEO and design pages and elements for the website. Focus on increasing inbound leads and improving user engagement.",
+    location: "Austin, TX",
   },
   {
     id: "2",
-    company: "Creative Agency Plus",
-    role: "UI/UX Designer",
-    period: "2018 - 2021",
-    description: "Designed user interfaces for web and mobile applications, conducted user research, and collaborated with development teams.",
-    location: "Los Angeles, CA",
+    company: "Sandbox",
+    role: "Front-End Developer & Designer",
+    period: "2017 - 2020",
+    description: "Updated and maintained company homepage, created homepage assets. Implemented app redesign in Material Design style, worked with Angular libraries for drag-and-drop functionality. Took on designer duties and collaborated with product manager on future feature releases.",
+    location: "Austin, TX",
   },
   {
     id: "3",
-    company: "StartUp Innovations",
-    role: "Junior Designer",
-    period: "2015 - 2018",
-    description: "Created visual designs for digital products, assisted in brand identity projects, and supported marketing campaigns.",
-    location: "New York, NY",
+    company: "Advertising Agency",
+    role: "Web Developer",
+    period: "2015 - 2017",
+    description: "Built the Polygraph Ad Platform, a Facebook ad creation tool that pulls from a data library to create accurate, location-based advertising campaigns. Maintained company web properties and internal tools.",
+    location: "Austin, TX",
+  },
+  {
+    id: "4",
+    company: "English Teaching",
+    role: "English Teacher",
+    period: "2010 - 2014",
+    description: "Taught English in Korea for nearly four years, immersing in the culture and learning valuable life lessons. Developed cross-cultural communication skills and adaptability.",
+    location: "South Korea",
   },
 ];
 
 const education = [
   {
     id: "1",
-    institution: "California Institute of Design",
-    degree: "Master of Design",
-    period: "2013 - 2015",
-    description: "Specialized in Human-Computer Interaction and User Experience Design.",
+    institution: "MakerSquare",
+    degree: "Software Engineering Immersive",
+    period: "2014 - 2015",
+    description: "Intensive coding bootcamp focused on full-stack JavaScript development, computer science fundamentals, and modern web technologies.",
   },
   {
     id: "2",
-    institution: "State University",
-    degree: "Bachelor of Fine Arts",
-    period: "2009 - 2013",
-    description: "Majored in Graphic Design with a minor in Computer Science.",
+    institution: "University of Washington",
+    degree: "Bachelor's Degree",
+    period: "2005 - 2009",
+    description: "Graduated from the University of Washington, building a strong academic foundation before exploring the world.",
   },
 ];
 
 const skills = [
-  { id: "1", name: "UI/UX Design", level: 95, category: "Design" },
-  { id: "2", name: "Figma", level: 90, category: "Tools" },
-  { id: "3", name: "Adobe Creative Suite", level: 85, category: "Tools" },
-  { id: "4", name: "HTML/CSS", level: 85, category: "Development" },
-  { id: "5", name: "JavaScript/React", level: 75, category: "Development" },
-  { id: "6", name: "User Research", level: 88, category: "Design" },
-  { id: "7", name: "Prototyping", level: 92, category: "Design" },
-  { id: "8", name: "Design Systems", level: 90, category: "Design" },
-];
-
-const certifications = [
-  { id: "1", name: "Google UX Design Certificate" },
-  { id: "2", name: "Adobe Certified Expert" },
-  { id: "3", name: "Interaction Design Foundation" },
-  { id: "4", name: "Certified Usability Analyst" },
+  { id: "1", name: "JavaScript", level: 95, category: "Development" },
+  { id: "2", name: "HTML/CSS/SCSS", level: 95, category: "Development" },
+  { id: "3", name: "Angular", level: 80, category: "Development" },
+  { id: "4", name: "React", level: 85, category: "Development" },
+  { id: "5", name: "WordPress", level: 80, category: "Development" },
+  { id: "6", name: "UI/UX Design", level: 88, category: "Design" },
+  { id: "7", name: "Sketch / Figma", level: 85, category: "Design" },
+  { id: "8", name: "Photoshop / Illustrator", level: 82, category: "Design" },
+  { id: "9", name: "SEO & Analytics", level: 78, category: "Strategy" },
+  { id: "10", name: "Git", level: 90, category: "Development" },
 ];
 
 export default function Resume() {
@@ -77,10 +80,12 @@ export default function Resume() {
                 My Experience
               </h1>
             </div>
-            <Button data-testid="button-download-resume">
-              <Download className="mr-2 h-4 w-4" />
-              Download Resume
-            </Button>
+            <a href="https://www.bymadesigns.com/AmeliaSmith2025.pdf" target="_blank" rel="noopener noreferrer">
+              <Button data-testid="button-download-resume">
+                <Download className="mr-2 h-4 w-4" />
+                View Full Resume
+              </Button>
+            </a>
           </div>
 
           <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
@@ -170,27 +175,6 @@ export default function Resume() {
                       </div>
                     </div>
                   ))}
-                </div>
-
-                <div className="mt-8 pt-6 border-t border-border">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
-                      <Award className="w-4 h-4 text-primary" />
-                    </div>
-                    <h4 className="font-semibold text-foreground" data-testid="text-certifications-title">Certifications</h4>
-                  </div>
-                  <ul className="space-y-2">
-                    {certifications.map((cert) => (
-                      <li 
-                        key={cert.id}
-                        className="flex items-start gap-2 text-sm text-muted-foreground"
-                        data-testid={`cert-item-${cert.id}`}
-                      >
-                        <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
-                        {cert.name}
-                      </li>
-                    ))}
-                  </ul>
                 </div>
               </Card>
             </div>
