@@ -23,9 +23,7 @@ export function Header() {
             <span 
               className="font-serif text-2xl md:text-3xl font-bold text-primary cursor-pointer"
               data-testid="link-logo"
-            >
-              BYMA
-            </span>
+            >Amy Smith</span>
           </Link>
 
           <nav className="hidden md:flex items-center gap-1">
@@ -72,7 +70,6 @@ export function Header() {
           </Button>
         </div>
       </div>
-
       {mobileMenuOpen && (
         <div className="md:hidden border-t border-border bg-background">
           <nav className="flex flex-col p-4 gap-2">

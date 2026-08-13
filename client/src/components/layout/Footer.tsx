@@ -85,7 +85,7 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-3 text-sm" data-testid="info-footer-location">
                 <MapPin className="w-4 h-4 text-accent" />
-                <span className="text-primary-foreground/80">Austin, TX</span>
+                <span className="text-primary-foreground/80">Allen, TX</span>
               </div>
               <a 
                 href="https://www.linkedin.com/in/abakameyer/" 

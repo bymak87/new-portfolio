@@ -9,12 +9,11 @@ export function HeroSection() {
         <div className="absolute top-20 right-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
         <div className="absolute bottom-20 left-1/4 w-80 h-80 bg-accent/10 rounded-full blur-3xl" />
       </div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-32">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="space-y-8 order-2 lg:order-1">
             <div className="space-y-4">
-              <p className="text-muted-foreground text-lg" data-testid="text-hero-greeting">Hey There,</p>
+              <p className="text-muted-foreground text-lg" data-testid="text-hero-greeting">Hey there,</p>
               <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-tight" data-testid="text-hero-title">
                 I'm a{" "}
                 <span className="text-primary relative">
@@ -37,7 +36,7 @@ export function HeroSection() {
                 Problem Solver
               </h1>
               <p className="text-muted-foreground text-lg md:text-xl max-w-lg leading-relaxed" data-testid="text-hero-description">
-                I build and design websites, web apps, and digital experiences that help businesses grow. From front-end development to UX design, I bring ideas to life.
+                I design and build websites, web applications, and digital experiences that help businesses grow. By combining UX design, front-end development, and digital strategy, I turn ideas into engaging, high-performing experiences.
               </p>
             </div>
 
