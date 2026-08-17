@@ -9,7 +9,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           <div className="space-y-4">
-            <h3 className="font-serif text-2xl font-bold" data-testid="text-footer-logo">BYMA Designs</h3>
+            <h3 className="font-serif text-2xl font-bold" data-testid="text-footer-logo">Amy Smith</h3>
             <p className="text-primary-foreground/80 text-sm leading-relaxed" data-testid="text-footer-tagline">
               Digital problem solver. I build and design websites, web apps, and digital experiences that help businesses grow.
             </p>
@@ -69,10 +69,12 @@ export function Footer() {
           <div className="space-y-4">
             <h4 className="font-semibold text-lg" data-testid="text-footer-services-title">What I Do</h4>
             <nav className="flex flex-col gap-2">
-              <span className="text-primary-foreground/80 text-sm" data-testid="text-service-web">Web Development</span>
-              <span className="text-primary-foreground/80 text-sm" data-testid="text-service-design">Web Design</span>
-              <span className="text-primary-foreground/80 text-sm" data-testid="text-service-uiux">UI/UX Design</span>
-              <span className="text-primary-foreground/80 text-sm" data-testid="text-service-strategy">Digital Strategy</span>
+              <span className="text-primary-foreground/80 text-sm" data-testid="text-service-web">Web Strategy</span>
+              <span className="text-primary-foreground/80 text-sm" data-testid="text-service-design">Growth & Optimization</span>
+              <span className="text-primary-foreground/80 text-sm" data-testid="text-service-design">Search & Visibility</span>
+              <span className="text-primary-foreground/80 text-sm" data-testid="text-service-analytics">Analytics and Insights</span>
+              <span className="text-primary-foreground/80 text-sm" data-testid="text-service-operations">Web Operations & Delivery</span>
+              <span className="text-primary-foreground/80 text-sm" data-testid="text-service-uiux">UI/UX Design & Development</span>
             </nav>
           </div>
 

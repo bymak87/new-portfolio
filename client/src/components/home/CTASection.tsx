@@ -9,7 +9,7 @@ export function CTASection() {
         <div className="text-center max-w-3xl mx-auto space-y-8">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 text-accent-foreground" data-testid="badge-cta-collaborate">
             <Sparkles className="w-4 h-4 text-accent" />
-            <span className="text-sm font-medium">Let's collaborate</span>
+            <span className="text-sm font-medium">Let's collaborate!</span>
           </div>
 
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground" data-testid="text-cta-title">
@@ -31,7 +31,7 @@ export function CTASection() {
             </Link>
             <Link href="/portfolio">
               <Button variant="outline" size="lg" data-testid="button-cta-portfolio">
-                View Portfolio
+                View portfolio
               </Button>
             </Link>
           </div>

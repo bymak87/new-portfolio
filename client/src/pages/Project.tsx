@@ -65,7 +65,7 @@ export default function ProjectPage() {
             <Link href="/portfolio">
               <Button data-testid="button-back-to-portfolio">
                 <ArrowLeft className="mr-2 h-4 w-4" />
-                Back to Portfolio
+                Back to portfolio
               </Button>
             </Link>
           </div>
@@ -85,21 +85,14 @@ export default function ProjectPage() {
           <Link href="/portfolio">
             <Button variant="ghost" className="mb-8" data-testid="button-back">
               <ArrowLeft className="mr-2 h-4 w-4" />
-              Back to Portfolio
+              Back to portfolio
             </Button>
           </Link>
 
           <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
             <div className="lg:col-span-2 space-y-8">
               <div className="aspect-video rounded-2xl bg-gradient-to-br from-primary/10 via-accent/5 to-primary/5 flex items-center justify-center border border-border/50" data-testid="img-project-hero">
-                <div className="text-center p-8">
-                  <div className="w-24 h-24 mx-auto mb-4 rounded-2xl bg-primary/20 flex items-center justify-center">
-                    <span className="font-serif text-4xl font-bold text-primary">
-                      {project.title.charAt(0)}
-                    </span>
-                  </div>
-                  <p className="text-muted-foreground">Project Preview Image</p>
-                </div>
+                <img src={project.imageUrl} alt="" />
               </div>
 
               <div className="space-y-6">
@@ -118,11 +111,17 @@ export default function ProjectPage() {
 
                 <div className="grid grid-cols-2 gap-6 pt-4">
                   <div className="aspect-[4/3] rounded-xl bg-gradient-to-br from-primary/5 to-accent/5 border border-border/50 flex items-center justify-center" data-testid="img-gallery-1">
-                    <span className="text-muted-foreground text-sm">Gallery Image 1</span>
+                    <img src={project.imageUrl1} alt="image 1" />
+                    
                   </div>
-                  <div className="aspect-[4/3] rounded-xl bg-gradient-to-br from-primary/5 to-accent/5 border border-border/50 flex items-center justify-center" data-testid="img-gallery-2">
-                    <span className="text-muted-foreground text-sm">Gallery Image 2</span>
-                  </div>
+                  {project.imageUrl2 && (
+                    <div
+                      className="aspect-[4/3] rounded-xl bg-gradient-to-br from-primary/5 to-accent/5 border border-border/50 flex items-center justify-center"
+                      data-testid="img-gallery-2"
+                    >
+                      <img src={project.imageUrl2} alt="image 2" />
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -137,7 +136,7 @@ export default function ProjectPage() {
                       <User className="w-4 h-4 text-primary" />
                     </div>
                     <div>
-                      <p className="text-xs text-muted-foreground">Client</p>
+                      <p className="text-xs text-muted-foreground">Employer</p>
                       <p className="font-medium text-foreground">{project.client || "Personal Project"}</p>
                     </div>
                   </div>

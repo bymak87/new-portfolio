@@ -54,7 +54,7 @@ export function Header() {
                 variant="default"
                 data-testid="button-hire-me"
               >
-                Hire Me
+                Hire me
               </Button>
             </Link>
           </div>

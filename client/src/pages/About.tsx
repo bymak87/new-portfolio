@@ -2,34 +2,34 @@ import { Layout } from "@/components/layout/Layout";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import { ArrowRight, Download, Heart, Globe, Users } from "lucide-react";
+import { ArrowRight, Download, Handshake, ListOrdered, Users } from "lucide-react";
 
 const values = [
   {
-    id: "curiosity",
-    icon: Globe,
-    title: "Curiosity",
-    description: "An insatiable curiosity for new places, cultures, and ideas that nourishes the soul and fuels creativity.",
-  },
-  {
-    id: "community",
+    id: "user-centered",
     icon: Users,
-    title: "Community",
-    description: "Giving back is important to me. I make it a point to volunteer at least once a quarter.",
+    title: "User-centered impact",
+    description: "I create experiences that make things easier for users while delivering measurable results for the business.",
   },
   {
-    id: "passion",
-    icon: Heart,
-    title: "Passion",
-    description: "I'm passionate about learning and keeping up with design trends, always growing in my craft.",
+    id: "structure",
+    icon: ListOrdered,
+    title: "Clarity and structure",
+    description: "I enjoy untangling complex problems and turning them into clear strategies, practical processes, and achievable next steps.",
+  },
+  {
+    id: "collaboration",
+    icon: Handshake,
+    title: "Thoughtful collaboration",
+    description: "I bring people and perspectives together, helping teams align, work more effectively, and build stronger solutions.",
   },
 ];
 
 const stats = [
   { id: "years", value: "10+", label: "Years in Tech" },
   { id: "uw", value: "UW", label: "Class of 2009" },
-  { id: "marathon", value: "1", label: "Marathon Finished" },
-  { id: "halfmarathons", value: "2", label: "Half-Marathons" },
+  { id: "marathon", value: "2", label: "Marathon Finished" },
+  { id: "halfmarathons", value: "5", label: "Half-Marathons" },
 ];
 
 export default function About() {
@@ -41,18 +41,13 @@ export default function About() {
             <div className="relative">
               <div className="absolute -inset-4 bg-primary/10 rounded-full blur-3xl" />
               <div className="relative aspect-square max-w-md mx-auto rounded-3xl bg-gradient-to-br from-primary/10 via-accent/5 to-primary/5 border border-border/50 flex items-center justify-center" data-testid="img-about-photo">
-                <div className="text-center p-8">
-                  <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-primary/20 flex items-center justify-center">
-                    <span className="font-serif text-5xl font-bold text-primary">AS</span>
-                  </div>
-                  <p className="text-muted-foreground">Amelia Smith</p>
-                </div>
+              <img src="/amy-smith-about.jpg" alt="" />
               </div>
             </div>
 
             <div className="space-y-6">
               <div className="space-y-2">
-                <p className="text-primary font-medium" data-testid="text-about-subtitle">About Me</p>
+                <p className="text-primary font-medium" data-testid="text-about-subtitle">About me</p>
                 <h1 className="font-serif text-4xl sm:text-5xl font-bold text-foreground" data-testid="text-about-title">
                   Digital Problem Solver
                 </h1>
@@ -60,37 +55,27 @@ export default function About() {
 
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p data-testid="text-about-paragraph-1">
-                  I graduated from the University of Washington in 2009 and, fueled by a curiosity 
-                  for new cultures, moved to Korea to teach English. I spent nearly four years there, 
-                  immersing myself in the culture and learning valuable life lessons.
+                  My career has been shaped by curiosity, adaptability, and a desire to understand how things work. After graduating from the University of Washington, I moved to South Korea and spent nearly four years teaching English. Living abroad strengthened my ability to communicate across cultures, navigate unfamiliar situations, and approach challenges from different perspectives.
                 </p>
                 <p data-testid="text-about-paragraph-2">
-                  In 2014, I decided to dive into the world of programming and moved to Austin, 
-                  where I began my journey at MakerSquare. It was a decision that has shaped my 
-                  career and continues to bring me fulfillment. I'm passionate about learning 
-                  and keeping up with design trends.
+                  That same curiosity eventually led me to programming. I moved to Austin to attend MakerSquare, where I learned to turn ideas into functional digital experiences. Since then, my career has expanded from hands-on design and development into website strategy, operations, analytics, and optimization. I enjoy bringing these disciplines together to create websites that are useful for people and effective for businesses.
                 </p>
                 <p data-testid="text-about-paragraph-3">
-                  When it comes to unwinding, I'm a fan of workplace comedies - The Office, Parks and 
-                  Recreation, and Abbott Elementary are a few of my all-time favorites. I discovered 
-                  running during the COVID lockdown, and it's become a lasting passion. I've completed 
-                  one marathon and two half-marathons. I also have an insatiable curiosity for new 
-                  places, and I truly believe that traveling and experiencing different cultures 
-                  nourishes the soul.
+                  Outside of work, I’m usually running, traveling, trying new food, or rewatching a favorite comedy. The Office, Parks and Recreation, and Frasier are always in rotation. Running gives me another way to explore, while travel continues to feed my curiosity about people, places, and cultures. And food will always be my love language.
                 </p>
               </div>
 
               <div className="flex flex-wrap items-center gap-4 pt-4">
                 <Link href="/contact">
                   <Button size="lg" data-testid="button-about-contact">
-                    Get in Touch
+                    Get in touch
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
-                <a href="https://www.bymadesigns.com/AmeliaSmith2025.pdf" target="_blank" rel="noopener noreferrer">
+                <a href="/Amelia-Smith-Resume-2026.pdf" target="_blank" rel="noopener noreferrer">
                   <Button variant="outline" size="lg" data-testid="button-about-download-cv">
                     <Download className="mr-2 h-4 w-4" />
-                    View Resume
+                    View resume
                   </Button>
                 </a>
               </div>
@@ -108,9 +93,9 @@ export default function About() {
 
           <div className="mb-20">
             <div className="text-center max-w-2xl mx-auto mb-12">
-              <p className="text-primary font-medium mb-2" data-testid="text-values-subtitle">My Values</p>
+              <p className="text-primary font-medium mb-2" data-testid="text-values-subtitle">Values</p>
               <h2 className="font-serif text-3xl sm:text-4xl font-bold text-foreground" data-testid="text-values-title">
-                What Drives Me
+                What motivates me
               </h2>
             </div>
 
@@ -129,14 +114,14 @@ export default function About() {
 
           <div className="bg-primary/5 rounded-3xl p-8 md:p-12 text-center" data-testid="section-about-cta">
             <h2 className="font-serif text-2xl sm:text-3xl font-bold text-foreground mb-4" data-testid="text-about-cta-title">
-              Ready to start a project together?
+              Ready to build a better web experience?
             </h2>
             <p className="text-muted-foreground mb-8 max-w-lg mx-auto" data-testid="text-about-cta-description">
-              I'm always excited to work on new projects and help bring your ideas to life.
+              Let’s turn your ideas and business goals into thoughtful digital experiences that improve customer journeys, increase engagement, and drive measurable growth.
             </p>
             <Link href="/contact">
               <Button size="lg" data-testid="button-about-cta">
-                Let's Talk
+                Let's talk
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>

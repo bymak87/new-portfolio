@@ -18,15 +18,15 @@ export function FeaturedProjects() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
           <div className="space-y-2">
-            <p className="text-primary font-medium" data-testid="text-featured-subtitle">Portfolio</p>
+            <p className="text-primary font-medium" data-testid="text-featured-subtitle">Portfolio highlights</p>
             <h2 className="font-serif text-3xl sm:text-4xl font-bold text-foreground" data-testid="text-featured-title">
-              My Latest Works
+              Where strategy meets execution
             </h2>
-            <p className="text-muted-foreground" data-testid="text-featured-description">Perfect solution for digital experience</p>
+            <p className="text-muted-foreground" data-testid="text-featured-description">Selected projects spanning website strategy, operations, optimization, analytics, UX design, and front-end development.</p>
           </div>
           <Link href="/portfolio">
             <Button variant="outline" data-testid="link-explore-more">
-              Explore More
+              View all projects
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </Link>
@@ -53,16 +53,7 @@ export function FeaturedProjects() {
                   data-testid={`card-featured-project-${project.id}`}
                 >
                   <div className="aspect-[4/3] bg-gradient-to-br from-primary/10 via-accent/5 to-primary/5 relative overflow-hidden">
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-center p-4">
-                        <div className="w-16 h-16 mx-auto mb-3 rounded-2xl bg-primary/20 flex items-center justify-center">
-                          <span className="font-serif text-xl font-bold text-primary">
-                            {project.title.charAt(0)}
-                          </span>
-                        </div>
-                        <p className="text-sm text-muted-foreground">Project Preview</p>
-                      </div>
-                    </div>
+                    <img src={project.imageUrlP} alt="" />
                     <div className="absolute top-3 left-3">
                       <span className="px-3 py-1 text-xs font-medium bg-background/90 backdrop-blur-sm rounded-full text-foreground" data-testid={`badge-featured-category-${project.id}`}>
                         {project.category}

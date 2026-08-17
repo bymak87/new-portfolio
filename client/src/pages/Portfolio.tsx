@@ -8,7 +8,7 @@ import { ExternalLink } from "lucide-react";
 import { useQuery } from "@tanstack/react-query";
 import type { Project } from "@shared/schema";
 
-const categories = ["All", "Web Development", "Web Application"];
+const categories = ["All", "Strategy", "Operations", "Design & Development", "Redesign"];
 
 export default function Portfolio() {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -17,9 +17,14 @@ export default function Portfolio() {
     queryKey: ["/api/projects"],
   });
 
-  const filteredProjects = activeCategory === "All"
+  const filteredProjects =
+  activeCategory === "All"
     ? allProjects
-    : allProjects.filter(p => p.category === activeCategory);
+    : allProjects.filter((project) =>
+        project.category
+          .toLowerCase()
+          .includes(activeCategory.toLowerCase())
+      );
 
   return (
     <Layout>
@@ -28,11 +33,10 @@ export default function Portfolio() {
           <div className="text-center max-w-3xl mx-auto mb-12">
             <p className="text-primary font-medium mb-2" data-testid="text-portfolio-subtitle">Portfolio</p>
             <h1 className="font-serif text-4xl sm:text-5xl font-bold text-foreground mb-4" data-testid="text-portfolio-title">
-              My Creative Works
+              Better Journeys. Stronger Results.
             </h1>
             <p className="text-muted-foreground text-lg" data-testid="text-portfolio-description">
-              Explore my collection of web development projects, applications, 
-              and digital experiences.
+              A selection of website initiatives that simplified customer journeys, improved performance, and helped marketing teams achieve their goals.
             </p>
           </div>
 
@@ -75,16 +79,8 @@ export default function Portfolio() {
                     data-testid={`card-portfolio-project-${project.id}`}
                   >
                     <div className="aspect-[4/3] bg-gradient-to-br from-primary/10 via-accent/5 to-primary/5 relative overflow-hidden">
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="text-center p-4">
-                          <div className="w-16 h-16 mx-auto mb-3 rounded-2xl bg-primary/20 flex items-center justify-center">
-                            <span className="font-serif text-xl font-bold text-primary">
-                              {project.title.charAt(0)}
-                            </span>
-                          </div>
-                          <p className="text-sm text-muted-foreground">Project Preview</p>
-                        </div>
-                      </div>
+                    <img src={project.imageUrlP} alt="" />
+                      
                       <div className="absolute top-3 left-3">
                         <span className="px-3 py-1 text-xs font-medium bg-background/90 backdrop-blur-sm rounded-full text-foreground" data-testid={`badge-category-${project.id}`}>
                           {project.category}

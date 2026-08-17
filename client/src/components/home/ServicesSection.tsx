@@ -1,37 +1,59 @@
-import { Monitor, Code, Palette, Layout } from "lucide-react";
+import { Monitor, Code, PanelTop, Layout, TrendingUp, Search, FileChartLine, ClipboardCheck } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 const services = [
   {
     id: "1",
-    title: "Web Development",
-    description: "Building responsive, performant websites with modern technologies.",
-    icon: "code",
+    title: "Web Strategy",
+    description:
+      "Creating website strategies, user journeys, and roadmaps aligned with business, audience, and marketing goals.",
+    icon: "panelTop",
   },
   {
     id: "2",
-    title: "Web Design",
-    description: "Creating beautiful, user-focused designs that drive engagement.",
-    icon: "monitor",
+    title: "Growth & Optimization",
+    description:
+      "Improving engagement and conversion through CRO, experimentation, personalization, and continuous optimization.",
+    icon: "trendingUp",
   },
   {
     id: "3",
-    title: "UI/UX Design",
-    description: "Designing intuitive interfaces with a focus on user experience.",
-    icon: "layout",
+    title: "Search Visibility",
+    description:
+      "Strengthening visibility across traditional and AI-powered search through SEO, AEO, GEO, and content strategy.",
+    icon: "search",
   },
   {
     id: "4",
-    title: "Digital Strategy",
-    description: "Optimizing web presence through SEO, analytics, and content strategy.",
-    icon: "palette",
+    title: "Analytics & Insights",
+    description:
+      "Turning behavioral and performance data into actionable recommendations using GA4, dashboards, and user-behavior tools.",
+    icon: "fileChartLine",
+  },
+  {
+    id: "5",
+    title: "Web Operations & Delivery",
+    description:
+      "Leading cross-functional website initiatives, development teams, vendors, workflows, QA, and global web programs.",
+    icon: "clipboardCheck",
+  },
+  {
+    id: "6",
+    title: "UX Design & Development",
+    description:
+      "Designing and building intuitive, responsive digital experiences—from wireframes and prototypes to front-end implementation.",
+    icon: "layout",
   },
 ];
 
 const iconMap = {
   code: Code,
+  trendingUp: TrendingUp,
+  search: Search,
   monitor: Monitor,
-  palette: Palette,
+  panelTop: PanelTop,
+  fileChartLine: FileChartLine,
+  clipboardCheck: ClipboardCheck,
   layout: Layout,
 };
 
@@ -67,24 +89,25 @@ export function ServicesSection() {
                 How can I help?
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed" data-testid="text-services-description-1">
-                I use process design to create digital products that help businesses grow. 
-                From building websites and web apps to optimizing user experiences, I find 
-                solutions and solve problems.
+                I help businesses turn their websites into more effective growth engines. By connecting web strategy, customer journeys, search visibility, analytics, and experimentation, I create experiences that are easier to navigate, easier to find, and more likely to convert.
               </p>
-              <p className="text-muted-foreground leading-relaxed" data-testid="text-services-description-2">
-                I'm passionate about learning and keeping up with design trends, 
-                bringing the latest best practices to every project I work on.
+              <p className="text-muted-foreground text-lg leading-relaxed" data-testid="text-services-description-2">
+                I also bring the operational structure needed to move ideas forward by aligning stakeholders, improving workflows, and guiding design and development from opportunity through launch and continuous optimization.
               </p>
             </div>
 
             <div className="flex flex-wrap items-center gap-8">
-              <div className="text-center">
+              {/* <div className="text-center">
                 <p className="font-serif text-4xl sm:text-5xl font-bold text-accent" data-testid="stat-projects-completed">10+</p>
-                <p className="text-sm text-muted-foreground mt-1">Years Experience</p>
+                <p className="text-sm text-muted-foreground mt-1">Years experience</p>
+              </div> */}
+              <div className="text-center">
+                <p className="font-serif text-4xl sm:text-5xl font-bold text-accent" data-testid="stat-happy-clients">8.3%</p>
+                <p className="text-sm text-muted-foreground mt-1">Website conversion rate</p>
               </div>
               <div className="text-center">
-                <p className="font-serif text-4xl sm:text-5xl font-bold text-accent" data-testid="stat-happy-clients">UW</p>
-                <p className="text-sm text-muted-foreground mt-1">Class of 2009</p>
+                <p className="font-serif text-4xl sm:text-5xl font-bold text-accent" data-testid="stat-happy-clients">51.3%</p>
+                <p className="text-sm text-muted-foreground mt-1">Organic traffic contribution</p>
               </div>
             </div>
           </div>

@@ -17,6 +17,24 @@ export function HeroSection() {
               <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-tight" data-testid="text-hero-title">
                 I'm a{" "}
                 <span className="text-primary relative">
+                  Website
+                  <svg
+                    className="absolute -bottom-2 left-0 w-full h-3 text-primary/30"
+                    viewBox="0 0 200 12"
+                    fill="none"
+                    preserveAspectRatio="none"
+                  >
+                    <path
+                      d="M2 8 C 40 2, 80 12, 120 6 C 160 0, 180 10, 198 4"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                      strokeLinecap="round"
+                      fill="none"
+                    />
+                  </svg>
+                </span>{" "}
+                Strategist and&nbsp;
+                <span className="text-primary relative">
                   Digital
                   <svg
                     className="absolute -bottom-2 left-0 w-full h-3 text-primary/30"
@@ -36,21 +54,20 @@ export function HeroSection() {
                 Problem Solver
               </h1>
               <p className="text-muted-foreground text-lg md:text-xl max-w-lg leading-relaxed" data-testid="text-hero-description">
-                I design and build websites, web applications, and digital experiences that help businesses grow. By combining UX design, front-end development, and digital strategy, I turn ideas into engaging, high-performing experiences.
-              </p>
+                I turn complex business goals into high-performing web experiences. By combining strategy, UX, analytics, optimization, and a foundation in design and development, I create clearer customer journeys, stronger digital operations, and measurable growth.              </p>
             </div>
 
             <div className="flex flex-wrap items-center gap-4">
               <Link href="/portfolio">
                 <Button size="lg" data-testid="button-view-work">
-                  View My Work
+                  View my work
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
-              <a href="https://www.bymadesigns.com/AmeliaSmith2025.pdf" target="_blank" rel="noopener noreferrer">
+              <a href="/Amelia-Smith-Resume-2026.pdf" target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" size="lg" data-testid="button-download-cv">
                   <Download className="mr-2 h-4 w-4" />
-                  View Resume
+                  View resume
                 </Button>
               </a>
             </div>
@@ -100,13 +117,7 @@ export function HeroSection() {
 
               <div className="relative aspect-[3/4] rounded-3xl overflow-hidden bg-gradient-to-br from-primary/20 via-accent/10 to-primary/5 border border-primary/10" data-testid="img-hero-photo">
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-primary/20 flex items-center justify-center">
-                      <span className="font-serif text-5xl font-bold text-primary">AS</span>
-                    </div>
-                    <p className="text-lg font-medium text-foreground">Amelia Smith</p>
-                    <p className="text-sm text-muted-foreground mt-2">Digital Problem Solver</p>
-                  </div>
+                      <img src="/Amy_Smith.jpg" alt="" />
                 </div>
               </div>
 

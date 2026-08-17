@@ -23,7 +23,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Location",
-    value: "Austin, TX",
+    value: "Allen, TX",
     description: "United States",
   },
   {
@@ -76,9 +76,9 @@ export default function Contact() {
       <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <p className="text-primary font-medium mb-2" data-testid="text-contact-subtitle">Get in Touch</p>
+            <p className="text-primary font-medium mb-2" data-testid="text-contact-subtitle">Get in touch</p>
             <h1 className="font-serif text-4xl sm:text-5xl font-bold text-foreground mb-4" data-testid="text-contact-title">
-              Let's Work Together
+              Let's work together
             </h1>
             <p className="text-muted-foreground text-lg" data-testid="text-contact-description">
               Have a project in mind or just want to say hello? I'd love to hear from you.
@@ -108,7 +108,7 @@ export default function Contact() {
             <div className="lg:col-span-2">
               <Card className="p-6 md:p-8 border-border/50" data-testid="card-contact-form">
                 <h2 className="font-serif text-2xl font-bold text-foreground mb-6" data-testid="text-form-title">
-                  Send a Message
+                  Send a message
                 </h2>
 
                 <Form {...form}>
@@ -204,7 +204,7 @@ export default function Contact() {
                       ) : (
                         <>
                           <Send className="mr-2 h-4 w-4" />
-                          Send Message
+                          Send message
                         </>
                       )}
                     </Button>
@@ -214,7 +214,7 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="mt-16">
+          {/* <div className="mt-16">
             <Card className="overflow-hidden border-border/50">
               <div className="aspect-[21/9] bg-gradient-to-br from-primary/10 via-accent/5 to-primary/5 flex items-center justify-center">
                 <div className="text-center p-8">
@@ -224,7 +224,7 @@ export default function Contact() {
                 </div>
               </div>
             </Card>
-          </div>
+          </div> */}
         </div>
       </section>
     </Layout>
