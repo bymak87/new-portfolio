@@ -11,11 +11,11 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="font-serif text-2xl font-bold" data-testid="text-footer-logo">Amy Smith</h3>
             <p className="text-primary-foreground/80 text-sm leading-relaxed" data-testid="text-footer-tagline">
-              Digital problem solver. I build and design websites, web apps, and digital experiences that help businesses grow.
+              Bringing together web strategy, UX, analytics, optimization, and development to build experiences that perform.
             </p>
             <div className="flex items-center gap-3 pt-2">
               <a 
-                href="https://github.com" 
+                href="https://github.com/bymak87" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-full bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-colors"
@@ -108,7 +108,7 @@ export function Footer() {
             {currentYear} BYMA Designs. All rights reserved.
           </p>
           <p className="text-primary-foreground/60 text-sm" data-testid="text-footer-credits">
-            Designed with care by Amelia Smith
+            Designed with care by Amy Smith
           </p>
         </div>
       </div>

@@ -92,8 +92,8 @@ export function HeroSection() {
                   <Code className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <p className="font-semibold text-foreground">Full Stack</p>
-                  <p className="text-xs text-muted-foreground">Web Developer</p>
+                  <p className="font-semibold text-foreground">Growth-minded</p>
+                  <p className="text-xs text-muted-foreground">Builder</p>
                 </div>
               </div>
             </div>
