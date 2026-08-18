@@ -3,6 +3,7 @@ import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { insertContactSchema } from "@shared/schema";
 import { z } from "zod";
+import { sendContactEmail } from "./mailer";
 
 export async function registerRoutes(
   httpServer: Server,
@@ -30,17 +31,30 @@ export async function registerRoutes(
   });
 
   app.post("/api/contact", async (req, res) => {
-    try {
-      const validatedData = insertContactSchema.parse(req.body);
-      const message = await storage.createContactMessage(validatedData);
-      res.status(201).json(message);
-    } catch (error) {
-      if (error instanceof z.ZodError) {
-        return res.status(400).json({ error: "Invalid input", details: error.errors });
-      }
-      res.status(500).json({ error: "Failed to send message" });
+  try {
+    const validatedData = insertContactSchema.parse(req.body);
+
+    await sendContactEmail(validatedData);
+
+    res.status(200).json({
+      success: true,
+      message: "Your message has been sent.",
+    });
+  } catch (error) {
+    if (error instanceof z.ZodError) {
+      return res.status(400).json({
+        error: "Invalid input",
+        details: error.errors,
+      });
     }
-  });
+
+    console.error("Contact form email failed:", error);
+
+    res.status(500).json({
+      error: "Your message could not be sent. Please try again.",
+    });
+  }
+});
 
   return httpServer;
 }
